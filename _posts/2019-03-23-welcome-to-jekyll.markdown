@@ -1,11 +1,8 @@
 ---
 layout: post
-title:  "Integrating razorpay into your webapp"
-date:   2019-03-23 21:03:36 +0530
+title:  "索引梳理"
+date:   2019-06-13 17:03:36 +0530
 categories: Javascript NodeJS
----
----
-索引梳理
 ---
 概念
 在数据之外，数据库系统还维护着满足特定查找算法的数据结构，这些数据结构以某种方式引用（指向）数据，这样就可以在这些数据结构上实现高级查找算法。这种数据结构，就是索引。
@@ -23,25 +20,3 @@ between相当于in，不属于范围查询
 如果查询条件中某索引中的字段用了函数，或者用了类似于id - 1 > 2的表达式，则mysql不会为这列使用索引。
 索引的选择性的取值范围是(0,1]，选择性越高，表示该索引的价值越大。
 为了提高数据插入的效率，建议在业务主键外新增一个自增主键。
-
-```javascript
-const Razorpay = require('razorpay');
-
-let rzp = Razorpay({
-	key_id: 'KEY_ID',
-	secret: 'name'
-});
-
-// capture request
-rzp.capture(payment_id, cost)
-	.then(function (data) {
-		return 2;
-	})
-```
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
-
